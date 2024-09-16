@@ -1,109 +1,1479 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indoor plant</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
-    <!-- Bootstrap CSS v5.2.1 -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <style>
-      .card-img {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        height: 400px;
-      }
-      .card-img img {
-        height: 100%;
-        width: 100%;
-      }
-    </style>
-  </head>
+    <!--  Splide CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
 
+    <link rel="stylesheet" href="style.css" />
+    <!-- js cdn bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Splide JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  </head>
   <body>
-    <header>
-      <!-- place navbar here -->
-    </header>
-    <main>
-      <div class="row">
-        <div class="card col-4">
-          <div class="card-img">
-            <img src="/assets/asset 9.jpeg" alt="dafuhoidusafhoiuewah" />
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card col-4">
-          <div class="card-img">
-            <img src="/assets/asset 10.jpeg" alt="dafuhoidusafhoiuewah" />
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card col-4">
-          <div class="card-img">
-            <img src="/assets/asset 11.jpeg" alt="dafuhoidusafhoiuewah" />
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card col-4">
-          <div class="card-img">
-            <img src="/assets/asset 6.jpeg" alt="dafuhoidusafhoiuewah" />
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card col-4">
-          <div class="card-img">
-            <img src="/assets/asset 11.jpeg" alt="dafuhoidusafhoiuewah" />
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card col-4">
-          <div class="card-img">
-            <img src="/assets/asset 8.jpeg" alt="dafuhoidusafhoiuewah" />
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card col-4">
-          <div class="card-img">
-            <img src="/assets/asset 20.png" alt="dafuhoidusafhoiuewah" />
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card col-4">
-          <div class="card-img">
+    <!-- navbar starts -->
+    <header class="sticky-top">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light"
+        aria-label="Offcanvas navbar large"
+        id="dhara-plants-nav"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#">
             <img
-              src="/assets/green-money-plant-9966397pl-a-500x500.webp"
-              alt="dafuhoidusafhoiuewah"
+              class="brand-logo-img"
+              src="assets/logo.png"
+              alt="brands-logo"
+              height="40"
             />
-            <p>Lorem ipsum dolor sit amet.</p>
+          </a>
+          <button
+            class="navbar-toggler btn-outline-success rounded-circle py-2"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#myOffcanvasNavbar"
+            aria-controls="myOffcanvasNavbar"
+          >
+            <i class="fa fa-user text-success"></i>
+          </button>
+          <div
+            class="offcanvas offcanvas-end magic-bg"
+            tabindex="-1"
+            id="myOffcanvasNavbar"
+            aria-labelledby="myOffcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="myOffcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-black"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body align-items-md-center">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item d-sm-none d-block">
+                  <button
+                    type="button"
+                    class="btn btn-outline-success rounded-pill ms-md-3 me-md-2 ctas cta-cart"
+                  >
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+                </li>
+                <li
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Indoor Plants
+                </li>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Air Plant</a>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      id="navbarDropdownTV"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Ferns
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Button Fern</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Maidenhair Fern</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Rabbit Foot Fern</a>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Lady Fern</a></li>
+                      <li><a class="dropdown-item" href="#">Autumn Fern</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      id="navbarDropdownOriginal"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Herbs
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">Basil</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Mint</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Cilantro</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Parsley</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      id="navbarDropdownGenres"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Succulents
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Aloe Vera</a></li>
+                      <li><a class="dropdown-item" href="#">Echeveria</a></li>
+                      <li><a class="dropdown-item" href="#">Crassula</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Kalanchoe</a>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Snake Plant</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Carnivorous Plants</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Bonsai</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Browse All</a></li>
+                </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Plants</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownSeeds"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Seeds
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownSeeds"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="Flower_Seeds.html"
+                        >Flower seeds</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Vegetable Seeds</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Herb seeds</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New Arraivals</a>
+                </li>
+              </ul>
+
+              <div class="search-group d-flex align-items-baseline">
+                <form class="input-group d-flex mt-3 mt-lg-0" role="search">
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn btn-outline-success"
+                    type="submit"
+                    title="search"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </form>
+                <button
+                  type="button"
+                  class="btn btn-outline-success rounded-pill ms-md-3 me-md-2 d-none d-sm-block"
+                >
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
+                <a
+                  href="#"
+                  class="btn btn-outline-success rounded-circle d-none d-sm-block"
+                  title="user-login"
+                  ><i class="fa fa-user"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar ends -->
+    <!-- New Slider -->
+    <div
+      class="splide d-sm-block d-none"
+      role="group"
+      aria-label="Splide Basic HTML Example"
+    >
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="slogan-parent">
+              <img
+                src="assets/background.jpg"
+                class="d-block slider-img"
+                alt="slider-img-1"
+                width="100%"
+              />
+              <div class="slogan">
+                <h1 class="slider-fs">Nurture Your Home with Nature</h1>
+                <p class="d-none d-lg-block">
+                  Transform Your Space with Dharaplant: Indoor Greenery,
+                  Delivered.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="slogan-parent">
+              <img
+                src="assets/background2.jpg"
+                class="d-block slider-img"
+                alt="slider-img-2"
+                width="100%"
+              />
+              <div class="slogan">
+                <h1 class="slider-fs">Nurture Your Home with Nature</h1>
+                <p class="d-none d-lg-block">
+                  Transform Your Space with Dharaplant: Indoor Greenery,
+                  Delivered.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="slogan-parent">
+              <img
+                src="assets/background3.jpg"
+                class="d-block slider-img"
+                alt="slider-img-3"
+                width="100%"
+              />
+              <div class="slogan">
+                <h1 class="slider-fs">Greenery, Naturally at Home</h1>
+                <p class="d-none d-lg-block">
+                  Transform Your Space with Dharaplant: Indoor Greenery,
+                  Delivered.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      var splide = new Splide(".splide", {
+        type: "loop",
+        padding: "12rem",
+      });
+
+      splide.mount();
+    </script>
+    <!-- New Slider end -->
+
+    <!-- this is first items -->
+    <div class="container" style="margin-top: 70px">
+      <div
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 border rounded py-3 mb-3"
+      >
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/img1.png"
+              class="card-img-top square-img"
+              alt="Aralia Golden Plant"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+
+                <span class="rating-and-review">3.8|126</span>
+              </h6>
+              <p class="card-title h5">Aralia Golden Plant</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="tools-assets/Untitled-1.jpg"
+              class="card-img-top square-img"
+              alt="Amulya Farms Lucky Wood "
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+
+                <span class="rating-and-review">4.8|126</span>
+              </h6>
+              <p class="card-title h5" title="Amulya Farms Lucky Wood">
+                Amulya Farms Lucky...
+              </p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/img3.png"
+              class="card-img-top square-img"
+              alt=">Areca Plam"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+
+                <span class="rating-and-review">4.5|126</span>
+              </h6>
+              <p class="card-title h5">Areca Plam</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/img5.png"
+              class="card-img-top square-img"
+              alt="Golden Pathos"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+
+                <span class="rating-and-review">4.9|126</span>
+              </h6>
+              <p class="card-title h5">Golden Pathos</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/img2.png"
+              class="card-img-top square-img"
+              alt="Jade plant"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+
+                <span class="rating-and-review">4.1|126</span>
+              </h6>
+              <p class="card-title h5">Jade plant</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/img6.png"
+              class="card-img-top square-img"
+              alt="Jade plant"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+
+                <span class="rating-and-review">3.5|126</span>
+              </h6>
+              <p class="card-title h5">Dracaena fragrans</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/img7.png"
+              class="card-img-top square-img"
+              alt="Jade plant"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+
+                <span class="rating-and-review">3.8|126</span>
+              </h6>
+              <p class="card-title h5">Zamioculcas Zamiifolia</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/img8.png"
+              class="card-img-top square-img"
+              alt="Jade plant"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+
+                <span class="rating-and-review">4.3|126</span>
+              </h6>
+              <p class="card-title h5">Rubber fig plant</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/img9.png"
+              class="card-img-top square-img"
+              alt="Jade plant"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+
+                <span class="rating-and-review">5|126</span>
+              </h6>
+              <p class="card-title h5">Tulsi plant</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- card 10 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/asset 19.jpeg"
+              class="card-img-top square-img"
+              alt="Jade plant"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+
+                <span class="rating-and-review">5|126</span>
+              </h6>
+              <p
+                class="card-title h5"
+                title="Lucky Bamboo 3 Layer Feng Shui Plant"
+              >
+                Lucky Bamboo 3...
+              </p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- card 11 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="tools-assets/asset B.jpg"
+              class="card-img-top square-img"
+              alt="Jade plant"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+
+                <span class="rating-and-review">4.5|126</span>
+              </h6>
+              <p class="card-title h5">Pease Lily</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- card 12 -->
+        <div class="col">
+          <div class="card">
+            <img
+              src="assets/asset 30.jpeg"
+              class="card-img-top square-img"
+              alt="Jade plant"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+
+                <span class="rating-and-review">4|126</span>
+              </h6>
+              <p class="card-title h6">Bamboo Plant</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
+    </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
+    <div class="container">
+      <!-- vartical option -->
+      <div class="row border rounded mb-5" style="margin-top: 50px">
+        <div class="col-lg-3 mt-4 d-none d-lg-block">
+          <h2>Category</h2>
+          <!-- <p>Use the .flex-column class to create a vertical nav:</p> -->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Outdoor Living</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Plants,Seeds&Bulbs</a>
+            </li>
+          </ul>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <h5>Indoor Plants</h5>
+              <a class="nav-link" href="#">Bamboo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bonsai</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Succulents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Carnivorous Plants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ferns</a>
+            </li>
+          </ul>
+
+          <h4>Garden Brands</h4>
+          <form>
+            <input type="checkbox" id="brands" name="brands" />
+            <label for="brands">Made for Amazon</label><br />
+
+            <br />
+
+            <h4>Subscription option</h4>
+
+            <input type="checkbox" id="subscription" name="subsccription" />
+            <label for="brands">Get it by Tomorrow</label><br />
+            <br />
+            <br />
+
+            <h4>Sunlight Exposure</h4>
+
+            <input type="checkbox" id="Full Shade" name="Full Shade" />
+            <label for="Full Shade">Full Shade</label><br />
+
+            <input type="checkbox" id="Full Sun" name="Full Sun" />
+            <label for="Full Sun">Full Sun</label><br />
+
+            <input type="checkbox" id="Partial Shade" name="Partial Shade" />
+            <label for="Partial Shade">Partial Shade</label><br />
+
+            <input type="checkbox" id="Partial Sun" name="Partial Sun" />
+            <label for="Partial Sun">Partial Sun</label><br />
+            <br /><br />
+
+            <h4>Special Features</h4>
+
+            <input
+              type="checkbox"
+              id="Air Purification"
+              name="Air Purification"
+            />
+            <label for="Air Purification">Air Purification</label><br />
+
+            <input
+              type="checkbox"
+              id="Attracts Pollinators"
+              name="Attracts Pollinators"
+            />
+            <label for="Attracts Pollinators">Attracts Pollinators</label><br />
+
+            <input
+              type="checkbox"
+              id="Drought Tolerant"
+              name="Drought Tolerant"
+            />
+            <label for="Drought Tolerant">Drought Tolerant</label><br />
+
+            <input
+              type="checkbox"
+              id="Extended Bloon Time"
+              name="Extended Bloon Time Sun"
+            />
+            <label for="Extended Bloon Time">Extended Bloon Time</label><br />
+          </form>
+        </div>
+
+        <!-- Featured categories -->
+        <!-- card 1 -->
+        <div class="col-lg-9 mt-4 mb-5 col-12 border-start">
+          <div class="row gy-3">
+            <h2>Featured Categories</h2>
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 9.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text h6 text-center">Cacti</p>
+                </div>
+              </div>
+            </div>
+            <!--  card 2 -->
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 29.jpeg"
+                  class="card-img-top square-img"
+                  alt="Bamboo"
+                />
+                <div class="card-body">
+                  <p class="card-text h6 text-center">Bamboo</p>
+                </div>
+              </div>
+            </div>
+            <!--  card 3 -->
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 45.jpeg"
+                  class="card-img-top square-img"
+                  alt="Bonsai"
+                />
+                <div class="card-body">
+                  <p class="card-text h6 text-center">Bonsai</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Recommended card -->
+          <!-- card 1 -->
+          <div class="row mt-4 gy-3">
+            <h2>Recommended for you</h2>
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 19.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title=" Lucky Bamboo 3 Layer Feng Shui Plant"
+                  >
+                    Rs. 350.00 <br />
+
+                    Lucky Plant...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 96.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title=" Good Luck Jade 
+                  Plant with self wateri"
+                  >
+                    Rs. 250.00 <br />
+                    Jade Plant...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 97.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title="Amulya Farms Lucky Wood Good Luck Live"
+                  >
+                    RS. 1,449.00 <br />
+
+                    Amulya Farms...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Hot new releases -->
+          <!-- card 1 -->
+          <div class="row mt-4 gy-3">
+            <h2>Hot new releases</h2>
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="tools-assets/Untitled-1.jpg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title="Garden Art(PACK OF 1)
+                  Brazilian Lucky B"
+                  >
+                    Rs. 1,399.00
+                    <br />
+                    Brazilian Lucky
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 98.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title="Amulya Farms Bamboo 
+                  Lucky Wood Plant"
+                  >
+                    799.00 <br />
+                    Bamboo.. Plant
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 30.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title=" Lucky Bamboo Plant | Lucky Bamboo Stricks.."
+                  >
+                    199.00 <br />
+                    Bamboo Stricks..
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Most wishes for -->
+          <!-- card 1 -->
+          <div class="row mt-4 gy-3">
+            <h2>Most Wished for</h2>
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset A.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title="Dracaena trifasciata"
+                  >
+                    Rs. 450.00 <br />
+
+                    Dracaena
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="tools-assets/asset B.jpg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text h6 text-center" title=" Lily Plant">
+                    Rs. 350.00 <br />
+                    Lily Plant
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/assetC.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text h6 text-center" title=" Fukien tea">
+                    RS. 1,449.00 <br />
+
+                    Fukien tea
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 1 -->
+          <div class="row mt-4 gy-3">
+            <h2>Combo</h2>
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 17.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title="Good Luck Snake Plant Pack of 3"
+                  >
+                    Rs. 350.00 <br />
+
+                    Snake Plant...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 43.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title="4 Lucky Feng Shui Plants."
+                  >
+                    Rs. 250.00 <br />
+                    Feng Shui Plants.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="col-sm-4 col-6">
+              <div class="card">
+                <img
+                  src="assets/asset 47.jpeg"
+                  class="card-img-top square-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p
+                    class="card-text h6 text-center"
+                    title="Sansevieria Snake, Two Layer Lucky Bamboo, Green Syngonium, Money,Jade Plant "
+                  >
+                    RS. 1,449.00 <br />
+
+                    5 Lucky Plant...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer start -->
+
+    <footer class="py-5 bg-success">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Information</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Careers</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Blogs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Get Help</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Policies</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Return Policy</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Cashback Program</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Terms of Service</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Green Team Scheme</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Account</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >My Account</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >track order</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button
+                  class="btn"
+                  type="button"
+                  style="background-color: #fff"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p>© 2024 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#">
+                <svg class="bi" width="24" height="24">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#">
+                <svg class="bi" width="24" height="24">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#">
+                <svg class="bi" width="24" height="24">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
