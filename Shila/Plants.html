@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indoor plant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!--  Splide CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- js cdn bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Splide JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark"
+        aria-label="Offcanvas navbar large"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              class="brand-logo-img"
+              src="assets/logo.png"
+              alt="brands-logo"
+              height="40"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#myOffcanvasNavbar"
+            aria-controls="myOffcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end text-bg-dark"
+            tabindex="-1"
+            id="myOffcanvasNavbar"
+            aria-labelledby="myOffcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="myOffcanvasNavbarLabel">
+                Offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Categories
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="#">Sub Categories</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownTV"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Sub Categories
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownOriginal"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Sub Categories
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownGenres"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Sub Categories
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Sub Categories</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Sub Categories</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#">Browse All</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Plants</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownSeeds"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Seeds
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownSeeds"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="Flower_Seeds.html"
+                        >Flower seeds</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Vegetable Seeds</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Herb seeds</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New Arraivals</a>
+                </li>
+              </ul>
+              <!-- Search input with name attribute and hidden label for accessibility -->
+              <div class="search-group">
+                <form class="input-group d-flex mt-3 mt-lg-0" role="search">
+                  <label for="navbarSearch" class="visually-hidden"
+                    >Search</label
+                  >
+                  <input
+                    id="navbarSearch"
+                    class="form-control"
+                    type="search"
+                    name="query"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn btn-outline-success fa fa-search"
+                    type="submit"
+                    title="Search"
+                  ></button>
+                </form>
+              </div>
+
+              <!-- Shopping cart icon with badge -->
+              <a
+                href="login.html"
+                class="btn btn-outline-success rounded-circle ms-4"
+                title="User Login"
+              >
+                <i class="fa fa-shopping-cart pt-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main></main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

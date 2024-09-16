@@ -1,0 +1,164 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* *{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+}
+
+/* Navbar */
+
+/* Utility classes */
+.section {
+  padding-top: 80px;
+}
+body {
+  background-color: #141414;
+}
+.navbar {
+  background-color: #0f0f0f;
+}
+.nav-item a {
+  color: #bfbfbf;
+}
+.nav-item :hover {
+  color: #edecec;
+}
+p {
+  color: #999999;
+}
+
+.get-started {
+  background-color: #e50000;
+  color: #fff;
+}
+.get-started:hover {
+  background-color: #e50000;
+  color: #f6e3e3;
+}
+.card-body {
+  background-color: #242424;
+  color: #e0e0e0;
+  border: #e500006a 1px solid;
+}
+.card-header {
+  background-color: #242424;
+  border: #e500006a 2px solid;
+}
+.bd-footer {
+  background-color: #0f0f0f;
+}
+li a {
+  color: #999999;
+  text-decoration: none;
+}
+h5 {
+  color: #fff;
+}
+
+/* Card start */
+.card-section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 32px;
+}
+
+/* Ott card Start */
+.ott__card {
+  position: relative;
+  width: 240px;
+  flex-shrink: 0;
+  aspect-ratio: 2/3;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-inline-end: 20px;
+}
+
+.ott__card img {
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+}
+
+.ott__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  perspective: none;
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f9d6a1;
+  
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+}
+
+.ott__card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+.ott__card:hover img {
+  scale: 0;
+}
+
+.card__description,
+.card__genre,
+.card__release-date {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card__description {
+  overflow-y: auto;
+}
+/* Ott card end */
+/* Card end */
+
+.your-element{
+  background: url(../assets/img/bg-2.png);
+}
