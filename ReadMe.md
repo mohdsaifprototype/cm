@@ -1,5 +1,5 @@
 This repo contains two websites
 
-Shila
+Shila: https://mohdsaifprototype.github.io/cm/shila/
 
-Kunal
+Kunal: https://mohdsaifprototype.github.io/cm/kunal/
