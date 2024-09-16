@@ -1,4 +1,4 @@
-This repo contains two websites
+This repo contains all the websites of the project for Creative Mind.
 
 [(Saket) Shila](https://mohdsaifprototype.github.io/cm/shila/)
 
